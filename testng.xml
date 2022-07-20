@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Testing amazon" >
+
+    <listeners>
+        <listener
+                class-name="main.java.utils.SuiteListener"></listener>
+    </listeners>
+
+    <test name="Verify home screen">
+        <parameter name="browserName" value="chrome" />
+        <classes>
+            <class name="test.java.TestClass">
+                <methods>
+                    <include name="testHomeScreenOpen"></include>
+                    <include name="testSuccessfulLogin"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
